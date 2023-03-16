@@ -38,7 +38,7 @@ export class AppComponent {
   }
 
   public getCardinalDirection(angle: number):string {
-    const directions = ['↑ N', '↗ NØ', '→ E', '↘ SØ', '↓ S', '↙ SV', '← V', '↖ NV'];
+    const directions = ['↑ N', '↗ NO', '→ E', '↘ SO', '↓ S', '↙ SV', '← V', '↖ NV'];
     return directions[Math.round(angle / 45) % 8];
 }
 }
