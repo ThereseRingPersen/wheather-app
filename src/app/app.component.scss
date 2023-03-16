@@ -44,11 +44,13 @@ p {
 }
 .inner-row-container{
   height: 100px;
+  min-width: 190px;
   flex: 1 1 190px;
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items:center;
+  padding: 16px;
   border: 1px solid #87CEFA;
   border-radius: 8px;
   margin:4px;
@@ -56,6 +58,7 @@ p {
 
 .inner-row-container-header{
   height: 50px;
+  flex: 1 1 100%;
   display:flex;
   justify-content: flex-start;
   align-items:center;

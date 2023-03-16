@@ -3,7 +3,7 @@ export interface WeatherData{
   now:{
     temperature: number,
     humidity: number,
-    windDirection: number,
+    windDirection: string,
     windSpeed: number,
   }
   nextHour:string,
