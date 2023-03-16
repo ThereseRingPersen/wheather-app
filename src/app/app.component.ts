@@ -26,7 +26,7 @@ export class AppComponent {
           now:{
             temperature:temp.data.instant.details.air_temperature,
             humidity: temp.data.instant.details.relative_humidity,
-            windDirection: temp.data.instant.details.wind_from_directions,
+            windDirection: this.getCardinalDirection(temp.data.instant.details.wind_from_direction),
             windSpeed: temp.data.instant.details.wind_speed,
           },
           nextHour:temp.data.next_1_hours.summary.symbol_code?? '',
@@ -36,4 +36,9 @@ export class AppComponent {
       }
     });
   }
+
+  public getCardinalDirection(angle: number):string {
+    const directions = ['↑ N', '↗ NØ', '→ E', '↘ SØ', '↓ S', '↙ SV', '← V', '↖ NV'];
+    return directions[Math.round(angle / 45) % 8];
+}
 }

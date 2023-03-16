@@ -1,16 +1,17 @@
 <div class="main">
-  <h1>Weather for {{data?.time| date}}</h1>
+  <h1>Været</h1>
+  <h2> {{data?.time| date}}</h2>
   <div class="column-container">
     <div class="row-layout">
       <div class="inner-row-container-header">
-        Now:
+        I dag :
       </div>
       <div class="inner-row-container">
-        {{data?.now?.temperature}}
+        {{data?.now?.temperature}}℃
         <div>temperatur</div>
       </div>
       <div class="inner-row-container">
-        {{data?.now?.humidity}}
+        {{data?.now?.humidity}} %
         <div>luft fuktighet</div>
       </div>
       <div class="inner-row-container">
@@ -18,23 +19,23 @@
         <div>vind retning</div>
       </div>
       <div class="inner-row-container">
-        {{data?.now?.windSpeed}}
+        {{data?.now?.windSpeed}} m/s
         <div>vind hastighet</div>
       </div>
     </div>
   </div>
   <div class="column-container">
+    <div class="inner-row-container-header">
+      Den neste timen:
+    </div>
     <div class="row-layout">
-      <div class="inner-row-container-header">
-        Next Hour:
-      </div>
       <div class="inner-row-container">
        {{data?.nextHour}}
       </div>
     </div>
     <div class="row-layout">
       <div class="inner-row-container-header">
-        Next 6 hours:
+        De neste 6 timene:
       </div>
       <div class="inner-row-container">
         {{data?.next6Hours}}
@@ -42,7 +43,7 @@
     </div>
     <div class="row-layout">
       <div class="inner-row-container-header">
-        Next 12 hours:
+        De neste 12 timene:
       </div>
       <div class="inner-row-container">
       {{data?.next12Hours}}
